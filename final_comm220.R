@@ -1,4 +1,4 @@
-# COMM 220: Research Methods in Communication Science 
+# COMM 220: Research Methods in Communication Science
 # Jake Tompkins (UID# 005331938)
 
 # You'll need to have these libraries installed (uncomment and run lines 5-15)...
@@ -177,27 +177,27 @@ control_sentiment_twt = sub_ControlDF[sub_ControlDF$sentiment>0,]
 control_nonsentiment_twt = sub_ControlDF[sub_ControlDF$sentiment==0,]
 
 
-# Quick histograms to see how many words with that sentiment were in each group of tweets 
-hist(sub_CovidDF$sentiment, 
-     main="Histogram for Covid Tweets", 
-     xlab="Sadness Score", 
-     border="black", 
+# Quick histograms to see how many words with that sentiment were in each group of tweets
+hist(sub_CovidDF$sentiment,
+     main="Histogram for Covid Tweets",
+     xlab="Sadness Score",
+     border="black",
      col="green",
      xlim=c(0.0,1.0),
-     las=1, 
+     las=1,
      breaks=6)
-hist(sub_ControlDF$sentiment, 
-     main="Histogram for Generic Tweets", 
-     xlab="Sadness Score", 
-     border="black", 
+hist(sub_ControlDF$sentiment,
+     main="Histogram for Generic Tweets",
+     xlab="Sadness Score",
+     border="black",
      col="grey",
      xlim=c(0.0,1.0),
-     las=1, 
+     las=1,
      breaks=6)
 
 
 
-# Perform t-test for each group (I usually expect these results to be statistically significant)
+# Perform t-test for each group (I expect these results to be statistically significant)
 t.test(sub_CovidDF$sentiment,sub_ControlDF$sentiment)
 
 
@@ -254,23 +254,23 @@ control_sentiment_twt = sub_ControlDF[sub_ControlDF$sentiment>0,]
 control_nonsentiment_twt = sub_ControlDF[sub_ControlDF$sentiment==0,]
 
 
-# Quick histograms to see how many words with that sentiment were in each group of tweets 
-hist(sub_CovidDF$sentiment, 
-     main="Histogram for Covid Tweets", 
-     xlab="Anticipation Score", 
-     border="black", 
+# Quick histograms to see how many words with that sentiment were in each group of tweets
+hist(sub_CovidDF$sentiment,
+     main="Histogram for Covid Tweets",
+     xlab="Anticipation Score",
+     border="black",
      col="green",
      xlim=c(0.0,1.0),
-     las=1, 
+     las=1,
      breaks=6)
-hist(sub_ControlDF$sentiment, 
-     main="Histogram for Generic Tweets", 
-     xlab="Anticipation Score", 
-     border="black", 
+hist(sub_ControlDF$sentiment,
+     main="Histogram for Generic Tweets",
+     xlab="Anticipation Score",
+     border="black",
      col="grey",
      xlim=c(0.0,1.0),
-     las=1, 
+     las=1,
      breaks=6)
 
-# Perform t-test for each group (I usually expect these results not to be statistically significant)
+# Perform t-test for each group (I expect these results not to be statistically significant)
 t.test(sub_CovidDF$sentiment,sub_ControlDF$sentiment)
